@@ -1,0 +1,602 @@
+/* Reset css */
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+.app-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+}
+
+/* Header */
+.header {
+    display: flex;
+    background-color: #3d3e3e;
+    height: 80px;
+    max-width: 100%;
+    padding: 0 47px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.header .logo {
+    flex: 1;
+    color: #e7d666;
+    font-weight: 800;
+    font-size: 38px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header .input {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 26px;
+}
+
+.input-text {
+    width: 70%;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    outline: none;
+    border-right-color: #212121;
+    border-bottom-color: #212121;
+}
+
+.header .input>i {
+    align-items: center;
+    display: flex;
+    margin-left: -30px;
+}
+
+.header .tv-shows {
+    flex: 1.5;
+    margin: 0 auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header .movies {
+    flex: 0.5;
+    text-align: center;
+    margin-left: -60px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header .account-management {
+    flex: 5;
+    gap: 6px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    height: 80px;
+}
+
+/* Account */
+.account-management-icon {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    cursor: pointer;
+}
+
+.account-management-icon>span {
+    padding: 0 8px;
+}
+
+.account-management-icon:hover .account-list {
+    display: block;
+}
+
+.account-list {
+    padding-left: 0;
+    list-style: none;
+    position: absolute;
+    right: 39px;
+    height: 180px;
+    top: calc(100% - 18px);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    transform-origin: calc(100%-20px) top;
+    animation: accountGrowth ease-in-out 0.2s;
+    will-change: opacity, transform;
+    display: none;
+}
+
+@keyframes accountGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.account-list>li {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(16, 16, 16);
+}
+
+.account-management-icon>ul>li>i {
+    position: absolute;
+    right: -14px;
+    line-height: 60px;
+    color: rgb(16, 16, 16);
+}
+
+.account-list::before {
+    content: "";
+    display: block;
+    border-width: 6px 7px;
+    border-style: solid;
+    border-color: transparent transparent #1d7a7a transparent;
+    position: absolute;
+    right: calc(100% - 70%);
+    top: -12px;
+}
+
+.account-management-icon>ul>li:hover .color-white {
+    color: #fff;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.account-management-icon>ul>li:hover {
+    transition: all 0.3s ease;
+    background-color: #1d7a7a;
+}
+
+.border-color-tb {
+    border-top-color: 2px solid #fff;
+}
+
+.movies:hover,
+.tv-shows:hover {
+    color: #e7d666;
+    transition: all 0.3s ease;
+}
+
+.account-management i,
+.account-management span {
+    cursor: pointer;
+}
+
+.user {
+    height: 32px;
+    width: 34px;
+    background-color: #e7d666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user>i {
+    margin-left: -1.5px;
+}
+
+.account-management i:last-child:hover {
+    transition: all 0.3s ease;
+    transform: scale(0.8);
+}
+
+.angle-down {
+    padding-top: 2px;
+}
+
+.account-management-icon:hover .angle-down {
+    display: none;
+}
+
+/* App content */
+
+.app-content {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+
+.app-content-left {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    max-width: 200px;
+    width: 100%;
+    top: 90px;
+}
+
+/* sidebar-left */
+
+.sidebar-left {
+    background-color: #477373;
+    border-top-right-radius: 66px;
+    border-bottom-right-radius: 66px;
+    height: 645px;
+}
+
+.sidebar-left_list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 58px auto;
+    line-height: 444px;
+    font-size: 18px;
+}
+
+.mr-home {
+    margin-left: 5px;
+}
+
+.sidebar-left_list>li {
+    height: 44px;
+    line-height: 44px;
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sidebar-left_list>li>i {
+    margin-right: 5px;
+    margin-left: 22px;
+    font-size: 20px;
+    width: 30px;
+}
+
+.vertical {
+    height: 64px;
+    background-color: #9b8e3b;
+    width: 6px;
+    line-height: 44px;
+    float: right;
+    margin-top: -10px;
+    display: none;
+}
+
+.sidebar-left_list>li:hover .vertical {
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.sidebar-left_list>li:hover {
+    background-color: #e7d666;
+    transition: all 0.2s ease;
+    font-size: 20px;
+}
+
+/* Category */
+.categories-container {
+    margin-top: -44px;
+}
+
+.heading-categories {
+    margin-left: 22px;
+    font-size: 20px;
+    font-weight: 780;
+    color: #e7d666;
+}
+
+.categories-container>ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 22px;
+}
+
+.categories-container>ul>li {
+    font-size: 18px;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.separation_sidebar {
+    height: 1px;
+    width: 200px;
+    background-color: #e7d666;
+    margin: 10px 0;
+}
+
+.categories-container>ul>li:hover {
+    text-decoration: underline;
+    color: #e7d666;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+/* Content */
+.content {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* slider-movie */
+#spacePolice {
+    height: 333px;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 66px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slider-movie {
+    position: relative;
+    width: 94%;
+    margin-bottom: -5px;
+}
+
+.slider-movie button {
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+    width: 84px;
+    height: 34px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background-color: #cdbc4d;
+    font-size: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.slider-movie button:hover {
+    opacity: 0.8;
+    font-size: 17px;
+}
+
+.slider-movie button i {
+    padding-right: 5px;
+}
+
+.slider-movie button:active {
+    transform: scale(0.9);
+    transition: all 0.2s ease;
+}
+
+/* content-movie */
+.content-movie {
+    width: 94%;
+    margin: 24px 0;
+    color: #fff;
+}
+
+.box-heading {
+    display: flex;
+    width: 150px;
+    cursor: pointer;
+}
+
+.box-heading i {
+    margin-top: 18px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.box-heading:hover {
+    color: #e7d666;
+    transform: scale(0.98);
+    transition: all 0.1s ease-in-out;
+}
+
+.movie-description-1,
+.movie-description-2,
+.movie-description-3,
+.movie-description-4,
+.movie-description-5,
+.movie-description-6,
+.movie-description-7,
+.movie-description-8 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.movie-description-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #7a7c7c;
+}
+
+.heading-movies,
+.heading-trending,
+.heading-tvSeries,
+.heading-cartoon,
+.heading-comedy,
+.heading-action,
+.heading-fantasy,
+.heading-upcoming {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.heading-trending,
+.heading-movies,
+.heading-tvSeries,
+.heading-cartoon,
+.heading-comedy,
+.heading-action,
+.heading-fantasy,
+.heading-upcoming {
+    margin-top: 10px;
+}
+
+.movies-list,
+.upcoming-movie-list,
+.tvSeries-movie-list,
+.cartoon-movie-list,
+.comedy-movie-list,
+.action-movie-list,
+.fantasy-movie-list,
+.trending-movie-list {
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mr {
+    margin-right: 87px;
+}
+
+.mt {
+    margin-top: 15px;
+}
+
+.movies-item,
+.upcoming-movie-item,
+.tvSeries-movie-item,
+.cartoon-movie-item,
+.comedy-movie-item,
+.action-movie-item,
+.fantasy-movie-item,
+.trending-movie-item {
+    border: 0.1px solid rgb(52, 52, 52);
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    height: 360px;
+    width: 19.6%;
+    cursor: pointer;
+}
+
+.rating {
+    float: right;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #d8d7d7;
+    box-shadow: 1px rgba(0, 0, 0, 0.3);
+}
+
+.rating span {
+    font-weight: 700;
+    color: #b5aa65;
+}
+
+.rating i {
+    color: yellow;
+    font-size: 17px;
+    margin: 0 8px;
+}
+
+.movies-item:hover,
+.trending-movie-item:hover,
+.tvSeries-movie-item:hover,
+.cartoon-movie-item:hover,
+.comedy-movie-item:hover,
+.action-movie-item:hover,
+.fantasy-movie-item:hover,
+.upcoming-movie-item:hover {
+    opacity: 0.8;
+    transform: scale(0.96);
+    transition: all 0.2s ease;
+}
+
+.movies-item:hover .rating,
+.trending-movie-item:hover .rating,
+.tvSeries-movie-item:hover .rating,
+.cartoon-movie-item:hover .rating,
+.comedy-movie-item:hover .rating,
+.action-movie-item:hover .rating,
+.fantasy-movie-item:hover .rating,
+.upcoming-movie-item:hover .rating {
+    background-color: #1d7a7a;
+}
+
+.seperator {
+    height: 5px;
+    width: 94%;
+    background-color: #353a3a;
+    margin: 50px 0;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    color: #586262;
+    background-color: rgb(22, 22, 22);
+    font-size: 14px;
+    margin-bottom: 70px;
+    margin-top: 10px;
+}
+
+.heading-footer {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-content-item p {
+    font-weight: 300;
+}
+
+.footer-content-list {
+    display: flex;
+}
+
+.footer-content-item {
+    margin-right: 160px;
+}
+
+.support {
+    height: 50px;
+    width: 90px;
+    cursor: pointer;
+    margin-bottom: 35px;
+    margin-right: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.support-img {
+    height: 60px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+}

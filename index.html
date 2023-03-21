@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <link rel="stylesheet" href="./assets/css/style-main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" href="./assets/img/icon-website.png">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="header">
+            <a href="#" class="logo">𝓩𝓞𝓩𝓞</a>
+            <div class="input">
+                <input class="input-text" type="text" placeholder="What do you want to watch?">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="tv-shows">TV SHOWS</div>
+            <div class="movies">MOVIES</div>
+            <div class="account-management">
+                <div class="account-management-icon">
+                    <div class="user">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <span>TPT</span>
+                    <i class="angle-down fa-sharp fa-solid fa-angle-down"></i>
+                    <ul class="account-list">
+                        <li>WATCHLIST <i class="color-white fa-solid fa-angle-right"></i>
+                        <li>ACCOUNT <i class="color-white fa-solid fa-angle-right"></i></li>
+                        <li id="sign-out">SIGN OUT <i class="color-white fa-solid fa-angle-right"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="app" class="app-content">
+            <div class="app-content-left">
+                <div class="sidebar-left">
+                    <ul class="sidebar-left_list">
+                        <li id="homeBtn"><i class="fa-solid fa-house"></i><span class="mr-home">Home</span>
+                            <div class="vertical"></div>
+                        </li>
+                        <li id="moviesBtn"><i class="fa-solid fa-video"></i> <span>Movies</span>
+                            <div class="vertical"></div>
+                        </li>
+                        <li id="tvSeriesBtn"><i class="fa-sharp fa-solid fa-tv"></i> <span>TV Series</span>
+                            <div class="vertical"></div>
+                        </li>
+                        <li id="upcomingBtn"><i class="fa-solid fa-calendar-days"></i> <span>Upcoming</span>
+                            <div class="vertical"></div>
+                        </li>
+                        <div class="separation_sidebar"></div>
+                    </ul>
+                    <div class="categories-container">
+                        <div class="heading-categories">Categories</div>
+                        <ul class="categories_list">
+                            <li id="cartoonBtn">Cartoon</li>
+                            <li id="comedyBtn">Comedy</li>
+                            <li id="actionBtn">Action</li>
+                            <li id="fantasyBtn">Fantasy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="slider-movie">
+                    <video autoplay loop id="spacePolice">
+                        <source src="./assets/video/space-police.mp4" type="video/mp4">
+                    </video>
+                    <button id="btn-pause"><i id="pause-icon" class="fa-solid fa-pause"></i>Pause</button>
+                </div>
+                <div class="content-movie">
+                    <div class="trending-movie">
+                        <div class="box-heading">
+                            <h1 class="heading-trending">Trending</h1>
+                            <i class="angle-down-movie fa-sharp fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="movie-description movie-description-1">
+                            <span class="movie-description-text">
+                                There are many movie genres currently trending in the world, such as superhero
+                                movies, horror movies, comedy movies, romantic movies, etc. However, one of the most
+                                popular and constantly updated genres is action movies.
+                                <br>
+                                <br>
+                                Action movies provide a place for young people to satisfy their passion for intense
+                                battle scenes, adventurous stunts, and thrilling chases. With stunning visuals,
+                                realistic shots, and top-notch special effects, the actors in action movies have
+                                become admired and beloved stars.
+                                <br>
+                                <br>
+                                Moreover, action movies also convey meaningful messages about friendship, love,
+                                teamwork, loyalty, and self-sacrifice for the greater good. With the development of
+                                technology and new and creative ideas, action movies have become an art form worth
+                                following and imagining.
+                                <br>
+                                <br>
+                                That is why the action movie genre is always considered "trending" and attracts the
+                                attention of audiences all over the world. Join the famous actors, beautiful scenes,
+                                and violent and dramatic action scenes to experience and explore the world of action
+                                movies that is making waves around the world.
+                            </span>
+                        </div>
+                        <div class="trending-movie-list">
+                            <div class="trending-movie-item mt mr" style="background-image: url(https://resizing.flixster.com/6R5NafclJ9o7utVZiBRX9S5Z_2g=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzlkMTI1OGQzLTI0ZTMtNDZhZC1hNzllLTNlNzIxZGY1ZDA4Mi5qcGc=)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="trending-movie-item mt mr" style="background-image: url(https://resizing.flixster.com/_0Mhf0W_vdhwlaqOaUDX6JiReKA=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzE0OGY2MTIxLTE1MDEtNDI5YS1hYzVlLWYyMzExYjBmZTlhMC5qcGc=
+                            )
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                            <div class="trending-movie-item mt mr" style="background-image: url(https://resizing.flixster.com/FLuS1mtbLsmLtJCuxgvnN8PZ1Bg=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzU5ODQ1Y2M1LWY1MWEtNDIzOS04NDRjLTcwMTlkY2Q5MGE3NS5qcGc=)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="trending-movie-item mt" style="background-image: url(https://m.media-amazon.com/images/M/MV5BODAwZDQ5ZjEtZDI1My00MTFiLTg0ZjUtOGE2YTBkOTdjODFhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="trending-movie-item mt mr" style="background-image: url(https://resizing.flixster.com/P6s0RlGDQvFmVgWgdBbyuAZwHMU=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzFhZjcxYTQ3LTExY2UtNDUxNy05NTI5LWI2ZjhkMGY1ODg1MS5qcGc=)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.8</span></div>
+                            </div>
+                            <div class="trending-movie-item mt mr" style="background-image: url(https://resizing.flixster.com/z6ABTqY9Z_hs2mKAokadKfuTHyg=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzI5NTZjNDYwLWFkNDgtNDhlZC05OWE5LWZlYzRhMjgwZDJjMC5qcGc=)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="trending-movie-item mt mr" style="background-image: url(data:image/jpeg;base64,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)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="trending-movie-item mt" style="background-image: url(https://i.ebayimg.com/images/g/IrMAAOSwe89ir7jD/s-l1600.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="upcoming" class="upcoming-movie">
+                        <div class="box-heading">
+                            <h1 class="heading-upcoming">Upcoming</h1>
+                            <i class="angle-down-movie fa-sharp fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="movie-description movie-description-2">
+                            <span class="movie-description-text">
+                                An exciting adventure is about to begin as your favorite movie characters return to
+                                the big screen with new, bolder, and unexpected stories. From action-packed,
+                                high-speed films to mysterious sci-fi tales, to emotionally charged romantic
+                                stories, each upcoming movie brings unique and unforgettable experiences for
+                                audiences.
+                                <br>
+                                <br>
+                                With talented actors, stunning cinematography, and thrilling plot twists, upcoming
+                                movies are eagerly anticipated by audiences worldwide, hoping to create a new wave
+                                in the film industry and provide great entertainment for viewers.
+                            </span>
+                        </div>
+                        <div class="upcoming-movie-list">
+                            <div class="upcoming-movie-item mt mr" style="background-image: url(https://pbs.twimg.com/media/FplxxadXEAA3csj?format=jpg&name=large)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="upcoming-movie-item mt mr" style="background-image: url(https://m.media-amazon.com/images/M/MV5BZDJiNTUyZWQtNGFkNy00ODhkLWJkNWMtOTI1ODhhYmNiYzU0XkEyXkFqcGdeQXVyMTMxNTMyNDQw._V1_FMjpg_UX1000_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                            <div class="upcoming-movie-item mt mr" style="background-image: url(https://upload.wikimedia.org/wikipedia/vi/3/31/Guardians_Of_The_Galaxy_3_poster.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="upcoming-movie-item mt" style="background-image: url(http://popcornsg.s3.amazonaws.com/gallery/1635206953-the-flas.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="upcoming-movie-item mt mr" style="background-image: url(https://m.media-amazon.com/images/M/MV5BYTNhNWRmMDctYzE4OS00MzczLWJkODgtNzYxZTQxM2Y1YmM3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.8</span></div>
+                            </div>
+                            <div class="upcoming-movie-item mt mr" style="background-image: url(https://top-mmo.fr/wp-content/uploads/2022/12/Evil-Dead-Rise-Movie-Poster.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="upcoming-movie-item mt mr" style="background-image: url(https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61Mde7eiFbL.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="upcoming-movie-item mt" style="background-image: url(https://img.cdn.vncdn.io/cinema/img/90225202119197600-imzUKQbSanWDJcCsY9QKmk9qmDp.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.5</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="movies" class="movie">
+                        <div class="box-heading">
+                            <h1 class="heading-movies">Movies</h1>
+                            <i class="angle-down-movie fa-sharp fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="movie-description movie-description-3">
+                            <span class="movie-description-text">
+                                After long hours of work and study, a new adventure is about to begin with thrilling
+                                and captivating movies. With seasons of extended and intriguing storylines, these
+                                films transport viewers to new worlds with unique characters and non-stop action.
+                                From heart-wrenching crime dramas, touching family films, to hilarious comedies
+                                <br>
+                                <br>
+                                These movies offer viewers an incredible experience and satisfy their passion for
+                                cinema. With talented actors, exceptional filmmakers, and stunning cinematography,
+                                these films have become an indispensable part of the entertainment industry,
+                                providing audiences with meaningful and relaxing moments.
+
+                            </span>
+                        </div>
+                        <div class="movies-list">
+                            <div class="movies-item mt mr" style="background-image: url(https://resizing.flixster.com/TEM5vrT0Kg1_L9tVi4-awVB_NYY=/206x305/v2/https://flxt.tmsimg.com/assets/p10549100_p_v8_ar.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="movies-item mt mr" style="background-image: url(https://mephimtv.cc/wp-content/uploads/2022/05/aquaman-2-va-vuong-quoc-da-mat-thumb.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                            <div class="movies-item mt mr" style="background-image: url(https://www.themoviedb.org/t/p/w500/heynsw1ZcTTxkxZpO1nR8wJv4jh.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="movies-item mt" style="background-image: url(https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mrs-chatterjee-vs-norway-et00319185-1678274110.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="movies-item mt mr" style="background-image: url(https://i1-giaitri.vnecdn.net/2015/07/31/mission-impossible-ghost-proto-4178-2875-1438337819.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=rjA5aNkDhoXQan1-b7L_gA)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.8</span></div>
+                            </div>
+                            <div class="movies-item mt mr" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVft5LGL5sXBASLeNJ8MvitLq5QbqqWkzIV3lTSaoCcsz44zQJ1CS06mO6RLhozklDYGU&usqp=CAU)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="movies-item mt mr" style="background-image: url(http://simg1zen.myclip.vn/image1/2021/03/17/1615975143408/f88673998d2d_384_570.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="movies-item mt" style="background-image: url(https://upload.wikimedia.org/wikipedia/vi/5/57/Rsz_ip_man.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.5</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tvSeries" class="tvSeries-movie">
+                        <div class="box-heading">
+                            <h1 class="heading-tvSeries">TV Series</h1>
+                            <i class="angle-down-movie fa-sharp fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="movie-description movie-description-4">
+                            <span class="movie-description-text">
+                                After hours of stressful work and study, a new adventure is about to begin with
+                                exciting and captivating TV series. With long seasons full of thrilling plotlines,
+                                TV series take viewers to new worlds with unique characters and non-stop action.
+                                From heart-wrenching crime dramas to emotional family stories, to hilarious
+                                comedies.
+                                <br>
+                                <br>
+                                TV series provide viewers with wonderful experiences and satisfy their passion for
+                                cinema. With talented actors, exceptional filmmakers, and beautiful scenery, TV
+                                series have become an essential part of the entertainment industry, bringing
+                                meaningful moments of relaxation to audiences.
+                            </span>
+                        </div>
+                        <div class="tvSeries-movie-list">
+                            <div class="tvSeries-movie-item mt mr" style="background-image: url(http://img-zlr1.tv360.vn/image1/2023/02/20/15/1676883185706/0b7f8730f4b6_360_540.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="tvSeries-movie-item mt mr" style="background-image: url(https://m.media-amazon.com/images/M/MV5BYzZkOGUwMzMtMTgyNS00YjFlLTg5NzYtZTE3Y2E5YTA5NWIyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                            <div class="tvSeries-movie-item mt mr" style="background-image: url(https://media.socastsrm.com/wordpress/wp-content/blogs.dir/679/files/2022/06/nima-neemz-nakhshab-dominion-final-scaled.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.5</span></div>
+                            </div>
+                            <div class="tvSeries-movie-item mt" style="background-image: url(https://bloganchoi.com/wp-content/uploads/2022/03/ma-ca-1.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="tvSeries-movie-item mt mr" style="background-image: url(https://cdn02.ticketbox.vn/poster/0c62bf1c-c5bb-11ea-b228-0242ac110006)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.8</span></div>
+                            </div>
+                            <div class="tvSeries-movie-item mt mr" style="background-image: url(https://boxofficevietnam.com/wp-content/uploads/2021/11/607e44854e1ae424397772.jpeg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="tvSeries-movie-item mt mr" style="background-image: url(https://rapchieuphim.com/photos/8925/bullet-train.jpeg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="tvSeries-movie-item mt" style="background-image: url(https://metiz.vn/media/poster_film/131313.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.5</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cartoon" class="cartoon-movie">
+                        <div class="box-heading">
+                            <h1 class="heading-cartoon">Cartoon</h1>
+                            <i class="angle-down-movie fa-sharp fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="movie-description movie-description-5">
+                            <span class="movie-description-text">
+                                In the world of animation, there is a genre that is captivating and cannot be
+                                ignored: cartoons. These films often bring touching and humorous stories to the
+                                audience through characters full of emotion and comical situations.
+                                <br>
+                                <br>
+                                With the development of graphics technology, filmmakers have shown their creativity
+                                through amazing graphics techniques, creating lively lines and bright colors.
+                                Cartoons are not just for children, but also attract adults with stories that have
+                                educational and inspirational power.
+                                <br>
+                                <br>
+                                Cartoons have been and are still one of the favorite film genres of many global
+                                audiences. If you want to find a film genre with a diversity of action, romance, and
+                                humor, not to mention adorable characters, then cartoons are the perfect choice for
+                                you.
+                            </span>
+                        </div>
+                        <div class="cartoon-movie-list">
+                            <div class="cartoon-movie-item mt mr" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYWtQk96XmbvKZYcP4bGsRtMF9HRLWNhSzgdrACIKxBSPwNa-9XciGfgDSBmzVFurQZM&usqp=CAU)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="cartoon-movie-item mt mr" style="background-image: url(https://www.cgv.vn/media/catalog/product/cache/1/image/1800x/71252117777b696995f01934522c402d/p/o/poster_sing_2_1_1_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                            <div class="cartoon-movie-item mt mr" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROia8FwtJyJwJWkZ6ttH1zUQgl6u0UjatytUl0lQ7aWa31Jd3WqeD-Y8t-wCqLUmQ17GE&usqp=CAU)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="cartoon-movie-item mt" style="background-image: url(https://www.cgv.vn/media/catalog/product/cache/1/image/1800x/71252117777b696995f01934522c402d/o/n/onward.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="cartoon-movie-item mt mr" style="background-image: url(http://khenphim.com/wp-content/uploads/2019/11/frozen-2-1-poster.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.8</span></div>
+                            </div>
+                            <div class="cartoon-movie-item mt mr" style="background-image: url(https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_-_addams_family_gia_dinh_addams_1_1_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="cartoon-movie-item mt mr" style="background-image: url(https://toomva.com/images/videos/2022/11/toy-story-4-2019-1669746716.jpeg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="cartoon-movie-item mt" style="background-image: url(https://cdn.shopify.com/s/files/1/0037/8008/3782/products/IMG_0403-1_1024x1024@2x.jpg?v=1662135556)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.5</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="comedy" class="comedy-movie">
+                        <div class="box-heading">
+                            <h1 class="heading-comedy">Comedy</h1>
+                            <i class="angle-down-movie fa-sharp fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="movie-description movie-description-6">
+                            <span class="movie-description-text">
+                                A bright smile accompanied by a sense of joy and happiness is the perfect measure
+                                for comedy films. Created from unexpected situations, humorous twists, and sweet
+                                romantic couples, comedies will bring you moments of creative and exciting
+                                entertainment.
+                                <br>
+                                <br>
+                                Sometimes, just a small funny scene can convey feelings of happiness and joy in life
+                                to the audience. Let's enjoy creative and exciting comedy films together, and don't
+                                forget to leave us with your hearty laughter!
+                            </span>
+                        </div>
+                        <div class="comedy-movie-list">
+                            <div class="comedy-movie-item mt mr" style="background-image: url(https://alternativemovieposters.com/wp-content/uploads/2022/11/Bryan-Johnson_Violent-Night.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="comedy-movie-item mt mr" style="background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyGV7yQMaCfIALhRHApU_XWK1FNoCV5eQXDUmiT3HvbJDWyWWoIDWJgoVRnrsmLaZ1cQXPkeuYLfOt9-XSLiNuQYwqxIEYUumZrKtnJErDGDf4oKN5k54b6uaPUp1jGNaQ7wbDF_qM1px5MqXw1HIl0mCsfZo0hFXmM8HyKCqQchrUfveLxR0L2I5t/s720/)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.6</span></div>
+                            </div>
+                            <div class="comedy-movie-item mt mr" style="background-image: url(https://m.media-amazon.com/images/M/MV5BNzViMzYyNzYtZDQ5ZS00YzkwLWI4ZWUtYzljZWEyNTdjYmQ2XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="comedy-movie-item mt" style="background-image: url(https://photo2.tinhte.vn/data/attachment-files/2022/11/6201819_thu-toi-di.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="comedy-movie-item mt mr" style="background-image: url(https://pbs.twimg.com/media/EuWrukNUUAgqKGi?format=jpg&name=medium)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.6</span></div>
+                            </div>
+                            <div class="comedy-movie-item mt mr" style="background-image: url(https://thegioidienanh.vn/stores/news_dataimages/anhvu/112022/04/20/0818_01.jpg?rt=20221104212558)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="comedy-movie-item mt mr" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYVx8eAylWYkHggeMPYy5v2oVUinEL-HYZh4JLpRsdjypBwGfGG0nPvnLZ9sakU6mlz4w&usqp=CAU)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="comedy-movie-item mt" style="background-image: url(https://m.media-amazon.com/images/M/MV5BZmE1Mjg5ZjgtYjkzYi00OWYxLWEyMDQtYjI3NWE1ZTc3N2Q3XkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.5</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="action" class="action-movie">
+                        <div class="box-heading">
+                            <h1 class="heading-action">Action</h1>
+                            <i class="angle-down-movie fa-sharp fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="movie-description movie-description-7">
+                            <span class="movie-description-text">
+                                The action genre is a type of film full of heroism, drama, and challenges. With
+                                intricate and surprising plot twists, warriors are created to fight against evil
+                                enemies and defend justice. The intense action scenes, the display of strength and
+                                decisive skills, bring suspense and satisfaction to the audience. The main
+                                characters in action films are often invincible heroes, skilled racers or soldiers
+                                on the battlefield, with power and determination to overcome all obstacles to
+                                achieve their goals.
+                                <br>
+                                <br>
+                                Action movies are the epitome of battles and epic fights, with tense and breathless
+                                situations that require the concentration and quick judgment of the viewer. The
+                                highlight of this genre is the spectacular and realistic action scenes that reflect
+                                the true spirit of warriors, creating a special appeal for the audience.
+                            </span>
+                        </div>
+                        <div class="action-movie-list">
+                            <div class="action-movie-item mt mr" style="background-image: url(https://static.metacritic.com/images/products/movies/9/f62b27bb506139ad7bb5ce70fca025b9.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="action-movie-item mt mr" style="background-image: url(https://m.media-amazon.com/images/M/MV5BNTI2YTI0MWEtNGQ4OS00ODIzLWE1MWEtZGJiN2E3ZmM1OWI1XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                            <div class="action-movie-item mt mr" style="background-image: url(https://cinematone.info/public/poster/poster_2108/210819184714_Eternals_bVDhA.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.2</span></div>
+                            </div>
+                            <div class="action-movie-item mt" style="background-image: url(http://phimnhua.com/wp-content/uploads/2021/05/zFFvxtK.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="action-movie-item mt mr" style="background-image: url(https://phimnhua.com/wp-content/uploads/2021/06/MV5BMDlhZDQ5NDUtNDcwMi00MTQ5LTk1Y2UtYjNmMjgzNzNhNzU3XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_-270x400.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                            <div class="action-movie-item mt mr" style="background-image: url(https://static1.dienanh.net/upload/202202/c664dae6-5e6f-4568-b8cb-902fe6a75408.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="action-movie-item mt mr" style="background-image: url(https://lumiere-a.akamaihd.net/v1/images/p_drstrangeinthemultiverseofmadness_245_476cabb1.jpeg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.3</span></div>
+                            </div>
+                            <div class="action-movie-item mt" style="background-image: url(https://images.vkoolzzz.net/fposter/thumb/movies/ZW1RBNK.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.9</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fantasy" class="fantasy-movie">
+                        <div class="box-heading">
+                            <h1 class="heading-fantasy">Fantasy</h1>
+                            <i class="angle-down-movie fa-sharp fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="movie-description movie-description-8">
+                            <span class="movie-description-text">
+                                The power of magic, strange creatures, and mysterious worlds are uncovered in the
+                                fantasy film genre. It is where imagination and reality come together in captivating
+                                stories that offer mesmerizing experiences and emotions for the audience.
+                                <br>
+                                <br>
+                                We will follow dangerous characters, mythical objects, and strange creatures through
+                                battles, adventures, and quests to uncover the cause of a decisive battle between
+                                different factions. Fantasy films take us to worlds that seem only to exist in
+                                legends but also offer profound messages about love, courage, and sacrifice.
+                                <br>
+                                <br>
+                                Join in heroic adventures, face unimaginable challenges, and explore the secrets of
+                                the fantasy world. These films will make you feel the pain, joy, love, and
+                                personality of the characters, making it impossible for you to take your eyes off
+                                the screen once an adventure has begun.
+                            </span>
+                        </div>
+                        <div class="fantasy-movie-list">
+                            <div class="fantasy-movie-item mt mr" style="background-image: url(https://image.mpapis.xyz/poster/nguoi-mandalore-phan-3-11045.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.1</span></div>
+                            </div>
+                            <div class="fantasy-movie-item mt mr" style="background-image: url(https://cuongphim.com/wp-content/uploads/2019/05/Tro-choi-cuong-quyen-cuong-phim-1-1.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                            <div class="fantasy-movie-item mt mr" style="background-image: url(https://static.playpdc.xyz/poster/jpg/Poster-sinh-vat-than-thoai-carnival-row-id_2420_21453004629Jewc.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="fantasy-movie-item mt" style="background-image: url(https://upload.wikimedia.org/wikipedia/vi/6/66/Wednesday_Netflix_series_poster.png)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="fantasy-movie-item mt mr" style="background-image: url(http://photos.q00gle.com/storage/files/images-2021/images-movies/09/636e1cd7b31f7.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.2</span></div>
+                            </div>
+                            <div class="fantasy-movie-item mt mr" style="background-image: url(https://images2.thanhnien.vn/uploaded/caotung/2020_07_09/ghosts-of-war_GJMO.jpg?width=500)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.8</span></div>
+                            </div>
+                            <div class="fantasy-movie-item mt mr" style="background-image: url(https://bazaarvietnam.vn/wp-content/uploads/2022/08/harper-bazaar-review-phim-gia-toc-rong-house-of-the-dragon-9-e1661231604109.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>8.0</span></div>
+                            </div>
+                            <div class="fantasy-movie-item mt" style="background-image: url(https://i0.wp.com/cdn.phimbo.info/images/poster-chua-te-nhung-chiec-nhan:-nhung-chiec-nhan-quyen-nang-2022.jpg)
+                            ;">
+                                <div class="rating"><i class="fa-solid fa-star"></i><span>7.0</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="seperator"></div>
+                <div class="footer">
+                    <h1 class="heading-footer">Questions? Contact us.</h1>
+                    <div class="footer-content-list">
+                        <div class="footer-content-item">
+                            <p>FAQ</p>
+                            <p>Investor Relations</p>
+                            <p>Privacy</p>
+                            <p>Account</p>
+                        </div>
+                        <div class="footer-content-item">
+                            <p>Help Center</p>
+                            <p>Only on ZoZo</p>
+                            <p>Cookie Preferences</p>
+                            <p>Home</p>
+                        </div>
+                        <div class="footer-content-item">
+                            <p>Movies</p>
+                            <p>TV Series</p>
+                            <p>Upcoming</p>
+                            <p>Trending</p>
+                        </div>
+                        <div class="footer-content-item">
+                            <p>Cartoon</p>
+                            <p>Comedy</p>
+                            <p>Action</p>
+                            <p>Fantasy</p>
+                        </div>
+                    </div>
+                    <div class="support" title="Chat with support staff">
+                        <img id="support-img" class="support-img" src="./assets/img/chatbot-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
